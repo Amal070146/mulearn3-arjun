@@ -10,7 +10,7 @@ const images = new Array(imageCount).fill(`./logos/`).map((image, ix) => ({
 export default function App() {
   return (
     <div className={styles.App}>
-      <Banner images={images} speed={8000} />
+      <Banner images={images} speed={12000} />
     </div>
   );
 }
