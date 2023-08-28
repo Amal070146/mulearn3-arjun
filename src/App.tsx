@@ -1,4 +1,5 @@
 import Banner from './Banner';
+import Cards from './Card';
 import styles from './banner.module.css';
 
 const imageCount = 5;
@@ -9,8 +10,13 @@ const images = new Array(imageCount).fill(`./logos/`).map((image, ix) => ({
 
 export default function App() {
   return (
-    <div className={styles.App}>
-      <Banner images={images} speed={12000} />
-    </div>
+    <>
+      <div className={styles.App}>
+        <Banner images={images} speed={12000} />
+      </div>
+      <div className={styles.App}>
+        <Cards />
+      </div>
+    </>
   );
 }
