@@ -6,6 +6,8 @@
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   margin: 1rem;
+  perspective: 100px;
+  overflow: hidden;
 }
 .card {
   padding: 1.5rem 1.5rem;
@@ -13,6 +15,11 @@
   width: fit-content;
   border-radius: 1rem;
   display: flex;
+}
+.cardOp {
+  animation-name: in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .logoContainer {
   margin: 0.5rem 0;
@@ -65,4 +72,40 @@
 }
 .badge:hover {
   background-color: #3f3f3f;
+}
+.cardAnimOut {
+  transform: rotateX(0deg);
+  animation-name: moveout;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.cardAnimIn {
+  animation-name: moveup;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 150ms;
+}
+@keyframes moveout {
+  from {
+    transform: rotateX(0deg) scaleY(1);
+  }
+  to {
+    transform: rotateX(45deg) scaleY(0);
+  }
+}
+@keyframes moveup {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(calc(-100% - 0.5rem));
+  }
+}
+@keyframes in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
