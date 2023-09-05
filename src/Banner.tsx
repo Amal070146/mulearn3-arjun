@@ -3,7 +3,7 @@ import styles from './banner.module.css';
 
 type BannerProps = {
   images: {
-    id: `${string}-${string}-${string}-${string}-${string}`;
+    id: string;
     image: string;
   }[];
   speed?: number;
