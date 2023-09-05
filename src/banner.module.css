@@ -15,7 +15,7 @@
 }
 
 .img:last-of-type {
-  padding-left: 2rem;
+  padding-left: 0;
 }
 
 .inner {
@@ -41,8 +41,9 @@
 .section {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   animation: swipe var(--speed) linear infinite backwards;
-  width:120%;
+  width:100%;
 }
 
 @keyframes swipe {
